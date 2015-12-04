@@ -1,0 +1,27 @@
+{
+  "name" : "testingxray",
+  "description" : "testing x-ray scrapper.",
+  "keywords" : ["util", "testing", "scrapper", "x-ray"],
+  "author" : "Joe Pillot <pillot@pobox.com> (http://pirouette.duckdns.org/)",
+  "contributors" : [],
+  "dependencies" : {},
+  "repository" : {"type": "git", "url": "git+https://github.com/joepi/testingxray.git"},
+  "main" : "test/test.js",
+  "version" : "0.0.0",
+  "scripts": {
+    "start": "node test/test.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch-release": "npm version patch && git push origin && git push origin --tags",
+    "minor-release": "npm version minor && git push origin && git push origin --tags",
+    "major-release": "npm version major && git push origin && git push origin --tags"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/joepi/testingxray/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/joepi/testingxray/issues"
+  }
+}

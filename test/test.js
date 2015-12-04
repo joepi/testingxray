@@ -1,8 +1,10 @@
 var Xray = require('x-ray');
 var fs = require('fs');
+var Monitor = require('monitor');
+var processMonitor = new Monitor({probeClass:'Process'});
 var wstream = fs.createWriteStream('results.json',{flags: 'a'});
 
-var x = Xray()
+var x = Xray();
 //.driver(phantom());
 var t = x('http://www.resto.fr/restaurants/france?searchPage=332&randomSeed=-1188518655','.businessCard'
 ,[{
@@ -17,6 +19,6 @@ link: 'a@href'
 }]
 )
 .paginate(".pagination a:nth-child(6)@href")
-.limit(3)
+.limit(20)
 
 t.write().pipe(wstream);
