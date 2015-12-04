@@ -17,6 +17,6 @@ link: 'a@href'
 }]
 )
 .paginate(".pagination a:nth-child(6)@href")
-.limit(2)
+.limit(3)
 
 t.write().pipe(wstream);
